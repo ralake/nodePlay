@@ -9,4 +9,15 @@ describe('player', function() {
   	expect(player.name).toEqual("Crispy");
   });
 
+  it('should intitialize without making a choice', function() {
+    expect(player.choice).toEqual(undefined);
+  });
+
+  it('should be able to make a choice', function() {
+    player.makeChoice('rock');
+    expect(player.choice).toEqual('rock');
+  });
+
+
+
 });
