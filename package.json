@@ -1,0 +1,22 @@
+{
+  "name": "node-intro",
+  "version": "1.0.0",
+  "description": "initial play with node",
+  "main": "index.js",
+  "scripts": {
+    "test": "node_modules/jasmine-node/bin/jasmine-node spec/ --verbose"
+    },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Benc93/node-intro.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Benc93/node-intro/issues"
+  },
+  "homepage": "https://github.com/Benc93/node-intro",
+  "devDependencies": {
+    "jasmine-node": "^1.14.5"
+  }
+}
