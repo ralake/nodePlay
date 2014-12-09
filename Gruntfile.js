@@ -11,10 +11,21 @@ module.exports = function(grunt) {
         forceExit: true,
       },
       all: ['spec/']
+    },
+
+    watch: {
+      scripts: {
+        files: ['**/*.js'],
+        tasks: ['jshint'],
+        options: {
+          spawn: false,
+        },
+      },
     }
+
   });
 
-
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-jasmine-node');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.registerTask('default', ['jshint', 'jasmine_node']);
