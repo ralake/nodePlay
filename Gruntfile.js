@@ -4,10 +4,19 @@ module.exports = function(grunt) {
     jshint: {
       src:  './src/*.js',
       spec: './spec/*Spec.js'
+    },
+
+    jasmine_node: {
+      options: {
+        forceExit: true,
+      },
+      all: ['spec/']
     }
   });
 
+
+  grunt.loadNpmTasks('grunt-jasmine-node');
   grunt.loadNpmTasks('grunt-contrib-jshint');
-  grunt.registerTask('default', ['jshint']);
+  grunt.registerTask('default', ['jshint', 'jasmine_node']);
   
 };
